@@ -1,0 +1,119 @@
+/* Base layout and soft creamy background */
+.flex-container {
+  background-color: #fdfbf7; /* Off-white/cream */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 2px solid #e6a817; /* Yolk yellow border around the whole page */
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Style the page regions to look like cards */
+header, main, aside, footer {
+  background-color: #ffffff; 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #f5deb3; /* Light wheat color */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* Header styling */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-color: #e6a817; /* Yolk yellow border for header */
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 50%; 
+  border: 3px solid #e6a817;
+}
+
+/* Navigation */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 0; /* Removed gap so the separators touch the text */
+}
+
+/* NEW: Added the yellow separators here */
+nav li {
+  border-right: 2px solid #e6a817; /* The yolk yellow separator */
+  padding: 0 15px; /* Adds space around the text inside the separator */
+}
+
+/* Removes the separator from the very last link */
+nav li:last-child {
+  border-right: none;
+}
+
+nav a, nav span {
+  text-decoration: none;
+  color: #8b4513; /* Warm brown for links */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e6a817; /* Yolk yellow on hover */
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: #d49a09; /* Slightly darker yolk yellow for readability */
+}
+
+p {
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* Side-by-side layout for desktop */
+@media (min-width: 600px) {
+  .flex-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+  
+  header, footer {
+    grid-column: 1 / -1; /* Header and footer span full width */
+  }
+  
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Sidebar (Aside) styling */
+aside {
+  border-color: #e6a817; /* Yolk yellow border for sidebar */
+}
+
+aside img {
+  display: block;
+  margin-bottom: 15px;
+  border: 3px solid #f5deb3; /* Wheat colored border around images */
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  border-color: #f5deb3;
+}
